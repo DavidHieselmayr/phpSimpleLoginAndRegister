@@ -1,9 +1,8 @@
 <?php
 require("database.php");
 if (!empty($_POST['submit'])) {
-    session_start();
     $_username = $conn->real_escape_string($_POST["username"]);
-    $_passwort = $conn->real_escape_string($_POST["password1"]);
+    $_passwort = $conn->real_escape_string($_POST["passwort"]);
 
 
     $_passwort = "saver" . $_passwort;
@@ -22,10 +21,9 @@ if (!empty($_POST['submit'])) {
             include("login_user_form.html");
             exit();
         }
-        $_res->close();
+
 
     }
-    $conn->close();
 
     if ($_SESSION['login'] != 1) {
         include("login_user_form.html");

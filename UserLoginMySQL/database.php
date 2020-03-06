@@ -4,7 +4,6 @@ $_db_datenbank = "web";
 $_db_username = "root";
 $_db_passwort = "";
 
-SESSION_START();
 
 // open database connection
 $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
